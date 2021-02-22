@@ -54,7 +54,7 @@ _dir="robot_localization-${pkgver}"
 source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/cra-ros-pkg/robot_localization/archive/${pkgver}.tar.gz"
         "624.patch"::"https://github.com/cra-ros-pkg/robot_localization/pull/624.patch")
 sha256sums=('67d566a1d2af92699f1a6d93c3b1672f2fc305ce651a47825cc2584c3fe5a78f'
-            'f3414f3571590d0f58f8772126850e6d747405265e286a86a7a14ec956b306be')
+            'SKIP')
 
 prepare() {
     cd "${_dir}"
