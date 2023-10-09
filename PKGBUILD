@@ -4,7 +4,7 @@ url='https://wiki.ros.org/robot_localization'
 pkgname='ros-noetic-robot-localization'
 pkgver='2.7.4'
 arch=('i686' 'x86_64' 'aarch64' 'armv7h' 'armv6h')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 
 ros_makedepends=(
@@ -60,6 +60,7 @@ build() {
   cd ${srcdir}/build
 
   # Build project
+  export CXXFLAGS="-Wno-deprecated-declarations"
   cmake ${srcdir}/${_dir} \
         -DCATKIN_BUILD_BINARY_PACKAGE=ON \
         -DCMAKE_INSTALL_PREFIX=/opt/ros/noetic \
